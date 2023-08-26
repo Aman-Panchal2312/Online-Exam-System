@@ -79,34 +79,50 @@
 
 
     // ----------------------------Deleting Exam-----------------------------------------------
+    const [questions , setQuestions] = useState([]);
 
-       const [questions , setQuestions] = useState([]);
-
-       useEffect(() => {
-           async function getAllQuestions(){
-               let value = await axios.get(`${baseUrl}/question`);
-               setQuestions(value.data);
-            }
-            getAllQuestions();
-       },[])
-
-
-       const [statusDeleteExam , setStatusDeleteExam] = useState();
+    useEffect(() => {
+        async function getAllQuestions(){
+            let value = await axios.get(`${baseUrl}/question`);
+            setQuestions(value.data);
+         }
+         getAllQuestions();
+    },[])
 
 
-       async function deleteExam(id){
-        //    console.log(id);
-           
-            for(let i=0; i<questions.length ;i++)
-            {
-                if( parseInt( questions[i].exam_id) === parseInt( id )){
-                    // console.log(questions[i].id);
-                    await axios.delete(`${baseUrl}/question/${questions[i].id}`);
-                } 
-            }
-            await axios.delete(`${baseUrl}/exam/${id}`);
-            setStatusDeleteExam(true);
-       }
+    const [statusDeleteExam , setStatusDeleteExam] = useState();
+
+
+    async function deleteExam(id){
+        console.log(id);
+        
+         for(let i=0; i<questions.length ;i++)
+         {
+            //  console.log("aman");
+            // //  console.log(id);
+            // console.log((questions[i]));
+             
+             if( parseInt(questions[i].exam_id) === (id)){
+                  console.log(questions[i].exam_id);
+                 
+                 await axios.delete(`${baseUrl}/question/${questions[i].id}`);
+                
+             } 
+         }
+         await axios.delete(`${baseUrl}/exam/${id}`);
+         setStatusDeleteExam(true);
+    }
+
+// ===========================================================
+
+// const [d , setD] = useState();
+
+// async function deleteQuestion(id){
+//     await axios.delete(`${baseUrl}/question/${id}`);
+//     setD(true);
+// }
+
+// ==============================================================
 
       if(status) return <Exam />
 

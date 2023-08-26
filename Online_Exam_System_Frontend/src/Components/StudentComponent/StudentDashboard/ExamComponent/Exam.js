@@ -39,6 +39,7 @@ function Exam() {
                             <div id={style.div3}><span>Pass Marks:{data.passMarks}</span> </div>
                             <div id={style.div4}><span>Total Marks:{data.marks}</span></div>
                             <div id={style.div5}>
+                              {/* <NavLink exact to={`/StudentDashboard/Exam/Maths/${data.id}`}> */}
                               <NavLink exact to={`/StudentDashboard/Exam/${category}/${data.id}`}>
                                  <button>Go to Exam</button>
                                </NavLink>

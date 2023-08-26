@@ -1,18 +1,16 @@
 package com.example.result;
 
-
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import com.example.Exam.Exam;
 import com.example.subject.Subject;
 import com.example.user.User;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Result {
@@ -47,6 +45,12 @@ public class Result {
 	   @ManyToOne
 	   @JoinColumn(name= "exam_id")
 	   private Exam examId;
+	   
+//	   ==============================
+	   @Column(name="mpcount")
+	   private int mpcount;
+	   
+//	   =============================
 
 	public int getId() {
 		return id;
@@ -119,8 +123,17 @@ public class Result {
 	public void setExamId(Exam examId) {
 		this.examId = examId;
 	}
+	
+//	==============================================================================
+	public int getMpcount() {
+		return mpcount;
+	}
+
+	public void setMpcount(int mpcount) {
+		this.mpcount = mpcount;
+	}
 	   
-	   
+//	==============================================================================   
 	   
 	   
 	   

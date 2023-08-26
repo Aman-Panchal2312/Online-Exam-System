@@ -4,6 +4,7 @@ import axios from "axios";
 
 import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
+import swal from 'sweetalert';
 
 import style from "../StudentDashboard.module.css";
 
@@ -15,11 +16,20 @@ function Test() {
     let { id } = useParams();
     let { category } = useParams();
 
-    const [allQuestions , setAllQuestions] = useState([]);
 
+    const [allQuestions , setAllQuestions] = useState([]);
+    
+// =============================================================================================
+    const [tab_change, setTabChange] = useState(0);
+// =============================================================================================
 
 
     useEffect(() => {
+
+// =============================================================================================
+        document.addEventListener("visibilitychange", handleVisibilityChange, false);
+// =============================================================================================
+
         async function getAllQuestions(){
             let value = await axios.get(`${baseUrl}/exam/${id}/question`);
             setAllQuestions(value.data);
@@ -30,11 +40,7 @@ function Test() {
 
     // ---------------------------------------------------------
     
-    // const [userAnswer , setUserAnswer] = useState({
-    //     answer1:"",
-    //     answer2:"",
-    //     answer3:"",
-    // });
+   
 
     const [answer , setAnswer] = useState({
         answer1:"",
@@ -69,8 +75,7 @@ function Test() {
         }
 
 
-        // console.log(answer);
-        // console.log(correctAnswer);
+       
 
         let score = 0;
         let status = "";
@@ -93,7 +98,7 @@ function Test() {
         var date = new Date();
         var d =  date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear() ;
         var t =  date.getHours() + ":" + date.getMinutes() +  ":" + date.getSeconds() ;
-   
+//    var abc =10;
        let data={
          "status": status,
          "score": score,
@@ -102,7 +107,8 @@ function Test() {
          "sname": {"name":category},   // --  subject name
          "totalMarks": "5",
          "examId": {"id":id},         // exam id
-         "totalQuestion": "5"
+         "totalQuestion": "5",
+         "mpcount": tab_change
        };
 
        //console.log(data);
@@ -110,7 +116,27 @@ function Test() {
        await axios.post(`${baseUrl}/result` , data);
         history.push("/StudentDashboard/Result");
     }
+    
+    // ===============================================================================================
+  
+    function handleVisibilityChange() {
+        if (document.visibilityState == "hidden") {
+            // the page is hidden
+           
+            setTabChange(tab_change+1);
+            // console.log(tab_change);
+          
 
+            swal("Changed Tab Detected", "Action has been Recorded", "error");
+            
+            
+        } else {
+          // the page is visible
+        //   setTabChange(tab_change+1);
+        }
+      }
+    //   var mpcounts=0;
+// ========================================================================================================
      let history = useHistory();
 
     return (
