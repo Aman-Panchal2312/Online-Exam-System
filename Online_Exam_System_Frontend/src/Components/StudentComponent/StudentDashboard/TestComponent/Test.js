@@ -36,7 +36,7 @@ function Test() {
             //console.log(value.data);
         }
         getAllQuestions();
-    },[id]);
+    },[id, tab_change]);
 
     // ---------------------------------------------------------
     
