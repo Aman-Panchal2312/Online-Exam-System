@@ -138,6 +138,8 @@ function Test() {
 
     return (
         <>
+      
+            
             <div id={style.displayBoxQuestionHeadingBox}>
                 <h1>Answer all the questions</h1>
             </div>
@@ -177,6 +179,7 @@ function Test() {
 
                 })
             }
+         
             <div id={style.submitExam}><button onClick={submitTest}>Submit Exam</button></div>
         </>
     );

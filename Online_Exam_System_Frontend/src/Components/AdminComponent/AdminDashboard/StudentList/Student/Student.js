@@ -58,8 +58,10 @@
                               <th id={style.center}>Exam Name</th>
                               <th id={style.center}>Exam Date</th>
                               <th id={style.center}>Result Status</th>
-                              <th id={style.center}>Total Marks</th>
-                              <th id={style.center}>Result Score</th>  
+                              <th id={style.center}>Result Score</th>
+                              <th id={style.center}>Total Marks</th>  
+                              <th id={style.center}>Tab Switch</th>  
+
                            </tr>
                         </thead>
                         <tbody>
@@ -74,6 +76,8 @@
                                               <td>{data.status}</td>
                                               <td>{data.score}</td>
                                               <td>{data.totalMarks}</td>
+                                              <td>{data.mpcount}</td>
+
                                           </tr>
                                     );
 

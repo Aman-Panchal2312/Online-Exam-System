@@ -26,7 +26,7 @@ function Exam() {
     return (
         <>
             <div id={style.displayBoxHeadingBox}>
-                <h1>All {category} Exam</h1>
+                <h1>All {category} EXAM</h1>
             </div>
             {
                 allExam.map((data, i) => {

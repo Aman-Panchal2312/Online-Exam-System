@@ -1,12 +1,13 @@
 
  body{
     margin: 0px;
+    
 }
 
  
  #header{
       /* background-color: #2e6da4dc; */
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgb(62, 147, 153); 
       
       
       float: left;
@@ -57,8 +58,9 @@
     text-decoration: none;
     display: inline-block;
     font-size: x-large;
+    font-weight: 900;
     height: 100%;
-    color: white;
+    color: black;
     margin-left: 15px;
   }
 
@@ -71,8 +73,8 @@
 
  
    #headerMenuBox a:hover{
-        color: rgba(240, 188, 188, 0.87);
-        text-decoration: underline;
+        color: white;
+        /* text-decoration: underline; */
         cursor:pointer;
     }
 
@@ -86,13 +88,13 @@
           /* background-color: yellow; */
           float: left;
           min-height: 500px;
-          width: 1050px;
+          width: 1300px;
 
           position: relative;
           top: 55px;
           
           margin-top: 20px;
-          margin-left: 20px;
+          margin-left: 30px;
     }
 
 
@@ -107,15 +109,17 @@
 
     #displayBoxHeadingBox h1{
         margin: 0px;
-        padding-left:70px ;
+        padding-left:520px ;
+        margin-top: 25px;
     }
 
 
 
     #displayBoxSubjectBox{
-       background-color: whitesmoke;
+       background-color: #ceecf8e8;
 
-       border: 1px solid black;
+       border: 1px solid black; 
+       border-radius: 15px;
        float: left;
        width:350px;
        height: 140px;
@@ -153,12 +157,17 @@
        position: relative;
        top: 17px;
        color:#fff;
-       background-color:#337ab7;
+       background-color:rgb(62, 147, 153);
+       border: 2px solid  rgb(26,89,94);
        height: 35px;
        border-radius: 7px;
        padding: 6px 12px;
        cursor: pointer;
-       border: 1px solid transparent;    
+       /* border: 1px solid transparent;     */
+    }
+    #subjectButton button:hover{
+      background-color:rgb(28,78,82);
+      border: 1px solid rgb(26,89,94);
     }
 
 
@@ -167,7 +176,8 @@
     
 
         #displayHeadingBox h2{
-        margin-left: 10px;
+        margin-left: 520px;
+        /* text-align: center; */
         font-size: 30px;
        /* background-color: yellow; */
      }
@@ -179,13 +189,15 @@
      /* background-color: cyan; */
      width: 1120px;
      float:left;
-     margin-left: 10px;
+     margin-left: 85px;
      font-size: 20px;
+     background-color: #ceecf8e8;
  }
    
     table{
       width: 100%;
       border-collapse: collapse;
+      
      
     }
 
@@ -207,14 +219,14 @@
  
     tr td button{
       color: white;
-      background-color: black;
+      background-color: rgb(62, 147, 153);
       height: 35px;
       min-width: 90px;
       border-radius: 7px;
     }
  
     tr td button:hover{
-      background-color: rgba(0, 0, 0, 0.9);
+      background-color: rgb(18, 61, 65);
     }
 
 
@@ -223,19 +235,21 @@
       #displayBoxExamBox{
        
          border: 1px solid black;
-         float: left;
-         width:350px;
-         min-height: 240px;
+         text-align: center;
+         width:450px;
+         min-height: 290px;
  
-         margin-top: 20px;
-         margin-left: 60px;
+         margin-top: 110px;
+         margin-left: 430px;
+         background-color: #ceecf8e8;
       }
  
       #div1{
           width: 100%;
           min-height: 60px;
-          background-color: whitesmoke;
-          float: left;
+          background-color: #ceecf8e8;
+          text-align: center;
+
       }
  
  
@@ -243,6 +257,7 @@
          font-size: 25px;
          position: relative;
          top: 15px;
+         font-weight: 600;
         }
  
       #div2,#div3,#div4{
@@ -277,13 +292,17 @@
          position: relative;
          top: 11px;
          color:#fff;
-         background-color:#337ab7;
+         background-color:rgb(62, 147, 153);
          height: 35px;
          border-radius: 7px;
          padding: 6px 12px;
          cursor: pointer;
-          border: 1px solid transparent;
+          border: 1px solid rgb(26,89,94);
            
+        }
+
+        #div5 button:hover{
+          background-color: rgb(28,78,82);
         }
 
 
@@ -299,10 +318,17 @@
          height:50px;
          border-bottom: 1px solid black;
          margin-left:70px ;
+         
+     }
+     #Alltestbox{
+      /* height: 2000px;
+      width: 100%; */
+      background-color: #ceecf8e8;
      }
 
       #displayBoxQuestionHeadingBox h1{
             margin: 0px;
+            background-color: #ceecf8e8;
        }
 
 
@@ -310,10 +336,11 @@
         /* background-color: yellow; */
         float: left;
         width:1100px;
-        margin-top: 20px;
+        
+        margin-top: 10px;
         margin-left: 70px;
-
-        border-bottom: 1px solid black;
+      background-color: #ceecf8e8;
+        /* border-bottom: 1px solid black; */
      }
 
 
@@ -348,8 +375,8 @@
           float: left;
 
           margin-left: 70px;
-          margin-top: 20px;
-          margin-bottom:40px;
+          margin-top: 10px;
+          margin-bottom:60px;
        }
 
          
@@ -358,13 +385,16 @@
         position: relative;
         top: 11;
         color:#fff;
-        background-color:#337ab7;
+        background-color:rgb(62, 147, 153);
         height: 35px;
         border-radius: 7px;
         padding: 6px 12px;
         cursor: pointer;
-         border: 1px solid transparent;
+         border: 1px solid rgb(26,89,94);
           
+       }
+       #submitExam button:hover{
+        background-color:rgb(28,78,82);
        }
 
 

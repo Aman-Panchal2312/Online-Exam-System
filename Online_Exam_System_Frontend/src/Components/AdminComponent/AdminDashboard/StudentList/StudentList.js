@@ -34,6 +34,7 @@
                             <th id={style.center}>User Name</th>
                             <th id={style.center}>User Email</th>
                             <th id={style.center}>Options</th>
+                           
                          </tr>
                        </thead>
                        <tbody>
@@ -43,6 +44,7 @@
                               <tr key={i}>
                                  <td>{data.name}</td> 
                                  <td>{data.email}</td> 
+                                 
                                  <td>
                                    <NavLink exact to={`/AdminDashboard/StudentList/Details/${data.email}`}>
                                      <button>View Result</button> 

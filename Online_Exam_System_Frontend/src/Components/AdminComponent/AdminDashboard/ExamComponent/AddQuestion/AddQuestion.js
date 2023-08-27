@@ -1,7 +1,7 @@
 
-    
+// import style from "./AddQuestion.css";
     import style from "../../SubjectComponent/Subject.module.css";
-
+  
       import {useState} from "react";
 
       import {useHistory , useParams} from "react-router-dom";

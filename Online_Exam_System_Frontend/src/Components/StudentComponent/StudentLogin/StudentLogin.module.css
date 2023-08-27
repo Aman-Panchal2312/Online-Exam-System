@@ -7,19 +7,29 @@
 
 
    #container{
-       background-color: white;
-       height: 470px;
+    
+       background-color: rgba(204, 250, 250, 0.938);
+       opacity: .8;
+       height: 420px;
        width: 500px;
       
        margin-left: 400px;
-       margin-top: 20px;
+       margin-top: 100px;
        float: left;
-       border: 1px solid #2e6da4;
+       border: 2px solid #020202;
+       background-size: cover;
+       box-shadow: 20px 15px 15px;
    }
    
 /* -------------------------------------------------------------- */
 #containerHeadingBox{
-    background-color: white;
+    /* background-color: white;
+    width: 400px;
+    margin-left: 50px;
+    float: left;
+    text-align: center; */
+    margin-top: 20px;
+    background-color: rgb(14, 57, 78);
     width: 400px;
     margin-left: 50px;
     float: left;
@@ -27,7 +37,7 @@
 }
 
 #containerHeadingBox h1{
-    color: #2e6da4;
+    color: #ffffff;
 
     margin: 10px 10px;
    
@@ -49,19 +59,20 @@
 
  #emailBox label,
  #passwordBox label{
-     margin-left: 10%;
-     margin-bottom: 20px;
-    font-size: 23px;
-    color: #2e6da4;
+    margin-left: 10%;
+    margin-bottom: 20px;
+   font-size: 23px;
+   color: #253d41;
+   font-weight: 900;
  }
 
  #emailBox input,
  #passwordBox input{
-     font-size: x-large;
-     display: block;
-     width: 80%;
-     margin-left: 10%;
-     margin-top: 10px;
+    font-size: x-large;
+    display: block;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10px;
  }
 
 /* ----------------------------------------------------------------------*/
@@ -89,22 +100,22 @@
 
 
  #login{
-     margin-top: 15px;
-     margin-left: 10%;
+    margin-top: 15px;
+    margin-left: 10%;
 
-     font-size: x-large;
-     text-align: center;
-     width: 80%;
-     height: 40px;
-     color: white;
-     background-color: #2e6da4ee;
-     cursor: pointer;
+    font-size: x-large;
+    text-align: center;
+    width: 80%;
+    height: 40px;
+    color: white;
+    background-color: rgb(62,147,153);
+    cursor: pointer;
 
  }
 
 
  #login:hover{
-     background-color: #2e6da4;
+    background-color: rgb(28,78,82);
 
  }
 
@@ -120,6 +131,8 @@
  #signup a{
      text-decoration: none;
      color: #2e6da4d7;
+     font-size: 15px;
+     font-weight: 700;
  }
 
  

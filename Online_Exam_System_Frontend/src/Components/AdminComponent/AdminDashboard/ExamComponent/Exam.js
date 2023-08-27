@@ -182,8 +182,9 @@
                       <button onClick={handleAddExam}>Add Exam</button>
                  </div>
 
-                  <div id={style.addBox} style={display}>   
-                     <label htmlFor="">Enter Subject Name </label>
+                  <div id={style.addBox} style={display}>  
+                   
+                     <label htmlFor="">Enter Subject Name</label>
                      <input id="nameFiled" onChange={(e) => handleInput(e)} name="name" type="text" 
                      placeholder="Enter Subject Name" /> 
 

@@ -6,7 +6,7 @@
 
     import {NavLink , BrowserRouter , Switch , Route} from "react-router-dom";
 
-     import pic4 from "../../../images/logo.png";
+     import pic4 from "../../../images/logo.jfif";
     
     
     import Dashboard from "./Dashboard/Dashboard";
@@ -53,8 +53,12 @@
 
                 <div id={style.sideMenubar}>
                          <div id={style.sideMenubarImageBox}>
-                           <img src= {pic4} alt="" />
+                           <img  id={style.imagelogo} src= {pic4} alt="" />
                          </div>
+                         {/* <div id={style.logobox}>
+                         <img src={pic4}/>
+
+                         </div> */}
 
                          <div id={style.sideMenubarList}>
                             <NavLink exact className={style.removeUnderline} to="/AdminDashboard/Subject"> <button > <span>  Subject </span></button></NavLink>

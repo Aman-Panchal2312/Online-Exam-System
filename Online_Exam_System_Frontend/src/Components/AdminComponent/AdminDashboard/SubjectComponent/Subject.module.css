@@ -4,6 +4,7 @@
   #displayHeadingBox h2{
      margin-left: 10px;
      font-size: 30px;
+    
     /* background-color: yellow; */
  }
 
@@ -17,6 +18,7 @@
      float:left;
      margin-left: 10px;
      font-size: 20px;
+     background-color: #ceecf8e8;
  }
    
     table{
@@ -43,7 +45,7 @@
  
     tr td button{
       color: white;
-      background-color: black;
+      background-color: rgb(62, 147, 153);
       height: 35px;
       min-width: 90px;
       border-radius: 7px;
@@ -65,15 +67,15 @@
     #addSubjectBox button{
           height: 30px;
           color: #fff;
-          background-color: #28a745;
-          border-color: #28a745;
+          background-color: rgb(62, 147, 153);
+          border-color: rgb(58, 102, 105);
           border-radius: .25rem;
           cursor: pointer;
     }  
 
 
     #addSubjectBox button:hover{
-      background-color: #0c4d1b;
+      background-color:rgb(28, 78, 82);
  }
  
  /* ---------------------------------------------------------------------------------- */
@@ -102,16 +104,16 @@
       margin-top: 10px; 
       height: 30px;
       color: #fff;
-      background-color: #28a745;
-      border-color: #28a745;
+      background-color: rgb(62, 147, 153);
+      border-color: rgb(26, 89, 94);
       border-radius: .25rem;
       cursor: pointer;
-      margin-left: 10px;
+      margin-left: 3px;
       min-width: 50px;
   }
 
   #addBox button:hover{
-    background-color: #0c4d1b;
+    background-color: rgb(28, 78, 82);
 }
 
 
@@ -123,11 +125,12 @@
   padding: 6px 12px;
   font-size: 16px;
   line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
+  color: #131212;
+  background-color: #ceecf8e8;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 
@@ -135,6 +138,13 @@
   display: inline-block;
   margin-right: 40px;
   font-size: 18px;
+  color: #fcfbfb;
+  /* font-size: 21px; */
+  border: 2px solid rgb(26, 89, 94);
+  background-color: rgb(62, 147, 153);
+  padding: 3px;
+  border-radius: 8px;
+ 
   
 }
 
