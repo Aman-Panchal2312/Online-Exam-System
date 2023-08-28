@@ -7,6 +7,7 @@
    import {useState} from "react" ;
    import axios from "axios";
    import baseUrl from "../../baseUrl";
+   import swal from 'sweetalert';
 
 
      function StudentLogin(){
@@ -31,20 +32,28 @@
        {
           let value  = await axios.get(`${baseUrl}/user/${user.email}`);
 
-          //console.log(value.data.email);
-          //console.log(user.email);
+        //   console.log(value.data.email);
+        //   console.log(user.email);
 
-          //console.log(value.data.password);
-          //console.log(user.password);
+        //   console.log(value.data.password);
+        //   console.log(user.password);
+       
 
-                if( value.data.email === user.email &&
-                   value.data.password === user.password)
-                {
-                   alert("success");
-                   sessionStorage.setItem("user" , user.email);
-                   history.push("/StudentDashboard");
-                }
-                else alert(" Wrong User Email or password");
+
+
+               
+                    if( value.data.email === user.email &&
+                        value.data.password === user.password)
+                     { 
+                        
+                        sessionStorage.setItem("user" , user.email);
+                        history.push("/StudentDashboard");
+                     }
+                      else swal("Opps! You Entered Wrong User Email or Password","","error");
+                      
+                 
+     
+               
              
         }
         
@@ -70,6 +79,7 @@
                    <label htmlFor="password"> Password
                      <input name="password" 
                       onChange={(e) => onTextFieldChange(e)} type="password" id={style.password} />
+                      
                    </label>
                </div>
 
