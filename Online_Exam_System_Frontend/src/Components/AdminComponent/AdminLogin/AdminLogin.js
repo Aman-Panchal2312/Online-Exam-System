@@ -63,7 +63,7 @@
 
 
             <div id={style.emailBox}>
-                <label htmlFor="email"> Email
+                <label htmlFor="email"> Name
                     <input name="admin_name" onChange={(e) => handleInput(e)} type="text" id={style.email} />
                 </label>
             </div>
