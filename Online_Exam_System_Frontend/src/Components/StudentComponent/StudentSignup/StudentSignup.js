@@ -4,9 +4,9 @@ import { NavLink, useHistory } from "react-router-dom";
 
 import axios from "axios";
 import { useState } from "react";
-//  ================================
+
 import swal from 'sweetalert';
-//  ================================
+
 
 import style from "./StudentSignup.module.css";
 
@@ -56,9 +56,10 @@ function StudentSignup() {
                     alert("Your account has created");
 
                     history.push("/StudentLogin");
-                }
-                else alert("password did not match");
-            }swal("Please enter a valid Password", "Enter Password Of 5 - 15 Length With Combination Of Number & Character ", "error");
+                }else alert("password did not match");
+            }else{
+                swal("Please enter a valid Password", "Enter Password Of 5 - 15 Length With Combination Of Number & Character ", "error");
+            }
 
 
         } else swal("Please enter a valid email", "Ex:- abc123@gmail.com", "error");
@@ -66,7 +67,7 @@ function StudentSignup() {
 
     }
 
-    // ============================================================================================================
+    
 
     return (
         <div id={style.container}>

@@ -8,7 +8,7 @@ import style from "./Subject.module.css";
  import axios from "axios";
  
  import baseUrl from "../../../baseUrl";
-
+ import swal from 'sweetalert';
 
   
      function Subject()
@@ -57,8 +57,20 @@ import style from "./Subject.module.css";
 
 
        async function handleAddNewSubject(){
-            await axios.post(`${baseUrl}/subject` , subject);
-            setStatus(true);
+       
+            console.log(subject);
+          
+            if(subject.name === ""){
+                swal("Please Enter a valid subject","","error");
+            }else{
+                await axios.post(`${baseUrl}/subject` , subject);
+            
+                setStatus(true);
+            }
+            
+           
+           
+      
         }
 
         const [status , setStatus] = useState();
